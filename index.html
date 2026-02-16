@@ -112,6 +112,218 @@
             letter-spacing: -1px;
         }
 
+        /* Hero Section - Estilo WCine Home */
+        .hero {
+            padding: 60px 0 100px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 0, 80, 0.1);
+            border: 1px solid rgba(255, 0, 80, 0.3);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 30px;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        h1 {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(38px, 7vw, 68px);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            letter-spacing: -2px;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Nova seção de benefícios estilo WCine */
+        .hero-benefits {
+            max-width: 800px;
+            margin: 40px auto;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: clamp(16px, 2.5vw, 20px);
+            font-weight: 600;
+            margin-bottom: 18px;
+            color: var(--text);
+            padding: 15px 25px;
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.08), rgba(108, 0, 255, 0.08));
+            border-radius: 15px;
+            border: 1px solid rgba(0, 245, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateX(10px);
+            border-color: var(--accent);
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.12), rgba(108, 0, 255, 0.12));
+        }
+
+        .benefit-check {
+            font-size: 24px;
+            color: var(--success);
+            font-weight: 700;
+            min-width: 28px;
+        }
+
+        .benefit-highlight {
+            color: var(--accent);
+            font-weight: 800;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(16px, 2.5vw, 19px);
+            color: var(--text-dim);
+            max-width: 700px;
+            margin: 35px auto 50px;
+            animation: fadeInUp 0.8s ease-out 0.5s both;
+            line-height: 1.6;
+        }
+
+        .cta-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 20px 45px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 40px rgba(255, 0, 80, 0.3);
+            animation: fadeInUp 0.8s ease-out 0.7s both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-primary:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-primary:hover:before {
+            left: 100%;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 50px rgba(255, 0, 80, 0.4);
+        }
+
+        .whatsapp-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Trial Banner */
+        .trial-banner {
+            background: linear-gradient(135deg, rgba(0, 245, 255, 0.15), rgba(108, 0, 255, 0.15));
+            border: 2px solid var(--accent);
+            border-radius: 20px;
+            padding: 35px;
+            max-width: 700px;
+            margin: 50px auto 0;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.8s both;
+        }
+
+        .trial-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .trial-banner h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(22px, 4vw, 30px);
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+
+        .trial-banner p {
+            color: var(--text);
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        .trial-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--accent);
+            color: var(--dark);
+            padding: 16px 35px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
+        }
+
+        .trial-button:hover {
+            background: var(--success);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 245, 255, 0.4);
+        }
+
         /* Device Check Section */
         .device-check {
             padding: 60px 0 40px;
@@ -185,175 +397,6 @@
             font-size: 14px;
             font-weight: 600;
             color: var(--text);
-        }
-
-        .trial-banner {
-            background: linear-gradient(135deg, rgba(0, 245, 255, 0.15), rgba(108, 0, 255, 0.15));
-            border: 2px solid var(--accent);
-            border-radius: 20px;
-            padding: 40px;
-            max-width: 700px;
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-            animation: fadeInUp 0.8s ease-out 0.6s both;
-        }
-
-        .trial-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .trial-banner h3 {
-            font-family: 'Sora', sans-serif;
-            font-size: clamp(24px, 4vw, 32px);
-            font-weight: 800;
-            margin-bottom: 10px;
-            color: var(--accent);
-        }
-
-        .trial-banner p {
-            color: var(--text);
-            margin-bottom: 25px;
-            font-size: 16px;
-        }
-
-        .trial-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--accent);
-            color: var(--dark);
-            padding: 16px 35px;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: 700;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
-        }
-
-        .trial-button:hover {
-            background: var(--success);
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 245, 255, 0.4);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 80px 0 120px;
-            text-align: center;
-            position: relative;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255, 0, 80, 0.1);
-            border: 1px solid rgba(255, 0, 80, 0.3);
-            padding: 10px 20px;
-            border-radius: 50px;
-            font-size: 14px;
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 30px;
-            animation: slideDown 0.8s ease-out;
-        }
-
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .pulse-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--primary);
-            border-radius: 50%;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(1.2); }
-        }
-
-        h1 {
-            font-family: 'Sora', sans-serif;
-            font-size: clamp(42px, 8vw, 78px);
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 25px;
-            letter-spacing: -2px;
-            animation: fadeInUp 0.8s ease-out 0.2s both;
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, var(--accent), var(--primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-subtitle {
-            font-size: clamp(18px, 3vw, 22px);
-            color: var(--text-dim);
-            max-width: 600px;
-            margin: 0 auto 50px;
-            animation: fadeInUp 0.8s ease-out 0.4s both;
-        }
-
-        .cta-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            padding: 20px 45px;
-            border-radius: 50px;
-            font-size: 18px;
-            font-weight: 700;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 40px rgba(255, 0, 80, 0.3);
-            animation: fadeInUp 0.8s ease-out 0.6s both;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-primary:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s;
-        }
-
-        .cta-primary:hover:before {
-            left: 100%;
-        }
-
-        .cta-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 50px rgba(255, 0, 80, 0.4);
-        }
-
-        .whatsapp-icon {
-            width: 24px;
-            height: 24px;
         }
 
         /* Features Grid */
@@ -453,14 +496,16 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 60px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .price-card {
-            background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            padding: 50px 40px;
+            background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+            border: 2px solid rgba(255,255,255,0.1);
+            padding: 40px;
             border-radius: 25px;
-            text-align: center;
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
@@ -469,21 +514,6 @@
         .price-card.featured {
             border-color: var(--primary);
             transform: scale(1.05);
-            background: linear-gradient(145deg, rgba(255,0,80,0.1), rgba(108,0,255,0.05));
-        }
-
-        .price-card.featured:before {
-            content: 'MAIS POPULAR';
-            position: absolute;
-            top: 20px;
-            right: -35px;
-            background: var(--primary);
-            color: white;
-            padding: 5px 50px;
-            font-size: 12px;
-            font-weight: 700;
-            transform: rotate(45deg);
-            letter-spacing: 1px;
         }
 
         .price-card:hover {
@@ -495,60 +525,80 @@
             transform: translateY(-10px) scale(1.07);
         }
 
-        .plan-name {
-            font-size: 14px;
-            color: var(--text-dim);
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        .featured-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
             font-weight: 700;
-            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .price {
+        .plan-name {
             font-family: 'Sora', sans-serif;
-            font-size: 56px;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--text);
+        }
+
+        .plan-price {
+            font-family: 'Sora', sans-serif;
+            font-size: 48px;
             font-weight: 800;
             color: var(--primary);
             margin-bottom: 10px;
         }
 
-        .price-period {
+        .plan-price span {
+            font-size: 20px;
             color: var(--text-dim);
+            font-weight: 400;
+        }
+
+        .plan-period {
+            color: var(--text-dim);
+            margin-bottom: 30px;
             font-size: 16px;
+        }
+
+        .plan-features {
+            list-style: none;
             margin-bottom: 30px;
         }
 
-        .price-features {
-            list-style: none;
-            margin-bottom: 40px;
-            text-align: left;
-        }
-
-        .price-features li {
+        .plan-features li {
             padding: 12px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             display: flex;
             align-items: center;
             gap: 12px;
+            color: var(--text);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        .price-features li:last-child {
+        .plan-features li:last-child {
             border-bottom: none;
         }
 
         .check-icon {
             color: var(--success);
-            font-size: 20px;
-            flex-shrink: 0;
+            font-weight: 700;
+            font-size: 18px;
         }
 
         .cta-secondary {
-            display: inline-block;
+            display: block;
             width: 100%;
-            padding: 18px 40px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            color: var(--text);
+            padding: 16px;
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            text-align: center;
             border-radius: 50px;
             font-size: 16px;
             font-weight: 700;
@@ -557,71 +607,72 @@
         }
 
         .cta-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--primary);
-            color: var(--primary);
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 0, 80, 0.3);
         }
 
         .price-card.featured .cta-secondary {
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            border-color: var(--primary);
             color: white;
+            border: none;
         }
 
-        /* Payment Methods */
+        /* Payment */
         .payment {
             padding: 80px 0;
         }
 
         .payment-methods {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 50px;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 800px;
+            margin: 50px auto 0;
         }
 
         .payment-item {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 30px 50px;
-            border-radius: 15px;
+            background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
             text-align: center;
             transition: all 0.3s ease;
         }
 
         .payment-item:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: var(--accent);
             transform: translateY(-5px);
+            border-color: var(--accent);
         }
 
         .payment-item span {
+            font-size: 48px;
             display: block;
-            font-size: 40px;
             margin-bottom: 15px;
         }
 
         .payment-item p {
+            font-size: 20px;
             font-weight: 600;
-            color: var(--text);
+            margin-bottom: 5px;
         }
 
-        /* FAQ Section */
+        /* FAQ */
         .faq {
-            padding: 100px 0;
+            padding: 80px 0;
             background: rgba(26, 26, 36, 0.5);
             backdrop-filter: blur(10px);
         }
 
         .faq-list {
             max-width: 800px;
-            margin: 60px auto 0;
+            margin: 50px auto 0;
         }
 
         .faq-item {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+            border: 1px solid rgba(255,255,255,0.1);
             border-radius: 15px;
             margin-bottom: 20px;
             overflow: hidden;
@@ -629,17 +680,18 @@
         }
 
         .faq-item:hover {
-            border-color: var(--primary);
+            border-color: rgba(255, 0, 80, 0.3);
         }
 
         .faq-question {
             padding: 25px 30px;
-            font-weight: 700;
             font-size: 18px;
+            font-weight: 600;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            color: var(--text);
             transition: all 0.3s ease;
         }
 
@@ -647,10 +699,16 @@
             color: var(--primary);
         }
 
+        .faq-question span {
+            font-size: 24px;
+            font-weight: 300;
+            color: var(--primary);
+        }
+
         .faq-answer {
             padding: 0 30px 25px;
             color: var(--text-dim);
-            line-height: 1.8;
+            line-height: 1.7;
         }
 
         /* CTA Final */
@@ -660,33 +718,34 @@
         }
 
         .cta-final-box {
-            background: linear-gradient(135deg, rgba(255, 0, 80, 0.15), rgba(108, 0, 255, 0.15));
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, rgba(255, 0, 80, 0.1), rgba(108, 0, 255, 0.1));
             border: 2px solid rgba(255, 0, 80, 0.3);
             border-radius: 30px;
-            padding: 80px 40px;
-            max-width: 900px;
-            margin: 0 auto;
         }
 
-        .cta-final h2 {
+        .cta-final-box h2 {
             font-family: 'Sora', sans-serif;
             font-size: clamp(32px, 5vw, 48px);
             font-weight: 800;
             margin-bottom: 20px;
-            letter-spacing: -1px;
+            color: var(--text);
         }
 
-        .cta-final p {
-            font-size: 20px;
+        .cta-final-box p {
+            font-size: 18px;
             color: var(--text-dim);
             margin-bottom: 40px;
         }
 
         /* Footer */
         footer {
+            background: var(--dark-lighter);
             padding: 40px 0;
             text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255,255,255,0.05);
         }
 
         footer p {
@@ -694,73 +753,42 @@
             font-size: 14px;
         }
 
-        /* WhatsApp Floating Button */
+        /* WhatsApp Float Button */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: #25D366;
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 10px 40px rgba(37, 211, 102, 0.4);
-            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
             z-index: 1000;
             transition: all 0.3s ease;
-            animation: bounceIn 1s ease-out 1s both;
+            animation: floatPulse 2s ease-in-out infinite;
         }
 
-        @keyframes bounceIn {
-            0% { transform: scale(0); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+        @keyframes floatPulse {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
 
         .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 15px 50px rgba(37, 211, 102, 0.5);
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
         }
 
         .whatsapp-float svg {
-            width: 40px;
-            height: 40px;
+            width: 32px;
+            height: 32px;
             fill: white;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .device-check {
-                padding: 40px 0 30px;
-            }
-
-            .device-showcase {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 15px;
-            }
-
-            .device-showcase-item {
-                padding: 20px 10px;
-            }
-
-            .device-logo {
-                font-size: 32px;
-            }
-
-            .trial-banner {
-                padding: 30px 20px;
-            }
-
-            .hero {
-                padding: 60px 0 80px;
-            }
-
-            .features, .pricing, .faq, .cta-final {
-                padding: 60px 0;
-            }
-
             .pricing-grid {
                 grid-template-columns: 1fr;
             }
@@ -769,25 +797,32 @@
                 transform: scale(1);
             }
 
-            .cta-final-box {
-                padding: 50px 30px;
+            .price-card.featured:hover {
+                transform: translateY(-10px) scale(1.02);
             }
 
-            .whatsapp-float {
-                width: 60px;
-                height: 60px;
-                bottom: 20px;
-                right: 20px;
+            .hero {
+                padding: 40px 0 60px;
             }
 
-            .whatsapp-float svg {
-                width: 32px;
-                height: 32px;
+            .benefit-item {
+                font-size: 15px;
+                padding: 12px 18px;
+            }
+
+            .device-showcase {
+                grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+                gap: 15px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THKLGSRW"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div class="bg-animated"></div>
     <div class="grain"></div>
 
@@ -798,234 +833,235 @@
     </header>
 
     <main>
-        <!-- Device Check Section -->
-        <section class="device-check">
+        <!-- Hero Section com estilo WCine Home -->
+        <section class="hero">
             <div class="container">
-                <h2 class="check-title">Você Tem Um Desses Dispositivos?</h2>
-                
-                <div class="device-showcase">
-                    <div class="device-showcase-item">
-                        <div class="device-logo">
-                            <svg viewBox="0 0 24 24" fill="#3DDC84" width="40" height="40">
-                                <path d="M17.6,9.48l1.84-3.18c0.16-0.31,0.04-0.69-0.26-0.85c-0.29-0.15-0.65-0.06-0.83,0.22l-1.88,3.24 c-2.86-1.21-6.08-1.21-8.94,0L5.65,5.67c-0.19-0.29-0.58-0.38-0.87-0.2C4.5,5.65,4.41,6.01,4.56,6.3L6.4,9.48 C3.3,11.25,1.28,14.44,1,18h22C22.72,14.44,20.7,11.25,17.6,9.48z M7,15.25c-0.69,0-1.25-0.56-1.25-1.25 c0-0.69,0.56-1.25,1.25-1.25S8.25,13.31,8.25,14C8.25,14.69,7.69,15.25,7,15.25z M17,15.25c-0.69,0-1.25-0.56-1.25-1.25 c0-0.69,0.56-1.25,1.25-1.25s1.25,0.56,1.25,1.25C18.25,14.69,17.69,15.25,17,15.25z"/>
-                            </svg>
-                        </div>
-                        <span>Android</span>
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span>
+                    Sistema Premium em Operação
+                </div>
+
+                <h1>
+                    A TV do Futuro é <span class="gradient-text">Aqui e Agora</span>
+                </h1>
+
+                <!-- Novos benefícios estilo WCine Home -->
+                <div class="hero-benefits">
+                    <div class="benefit-item">
+                        <span class="benefit-check">✅</span>
+                        <span>Mais de <span class="benefit-highlight">5.000+</span> Canais ao Vivo</span>
                     </div>
-                    <div class="device-showcase-item">
-                        <div class="device-logo">
-                            <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40">
-                                <path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z"/>
-                            </svg>
-                        </div>
-                        <span>iOS</span>
+                    <div class="benefit-item">
+                        <span class="benefit-check">✅</span>
+                        <span>Mais de <span class="benefit-highlight">20.000+</span> Filmes e Séries</span>
                     </div>
-                    <div class="device-showcase-item">
-                        <div class="device-logo">
-                            <img src="https://t2.tudocdn.net/664615?w=1000&fit=clip" alt="LG" style="height: 40px; width: auto;">
-                        </div>
-                        <span>LG</span>
+                    <div class="benefit-item">
+                        <span class="benefit-check">✅</span>
+                        <span>Qualidade <span class="benefit-highlight">4K e Full HD</span></span>
                     </div>
-                    <div class="device-showcase-item">
-                        <div class="device-logo">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP5oHu_YM8aizbjUSemwsPwOThCrb9m_QB_zpgV4npKG-49QHKJmrpdnw&s=10" alt="Samsung" style="height: 40px; width: auto;">
-                        </div>
-                        <span>Samsung</span>
+                    <div class="benefit-item">
+                        <span class="benefit-check">✅</span>
+                        <span>Sistema <span class="benefit-highlight">Anti-Travas</span> Disponível</span>
                     </div>
-                    <div class="device-showcase-item">
-                        <div class="device-logo">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-qlnI_AWDGUmTObCc3LYHldqS7p1srxwtsNTL00UanA&s=10" alt="Philco" style="height: 45px; width: auto;">
-                        </div>
-                        <span>Philco</span>
+                    <div class="benefit-item">
+                        <span class="benefit-check">✅</span>
+                        <span><span class="benefit-highlight">2 Conexões Simultâneas</span> Incluídas</span>
                     </div>
-                    <div class="device-showcase-item">
-                        <div class="device-logo">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJFsg8OiZzIijwx6_vxd3tlsD2AWB3_EE-K1_h2n9GXQ&s=10" alt="Philips" style="height: 45px; width: auto;">
-                        </div>
-                        <span>Philips</span>
-                    </div>
-                    <div class="device-showcase-item">
-                        <div class="device-logo">
-                            <img src="https://m.media-amazon.com/images/I/61L0X7gar+L.png" alt="Fire Stick" style="height: 45px; width: auto;">
-                        </div>
-                        <span>Fire Stick</span>
-                    </div>
-                    <div class="device-showcase-item">
-                        <div class="device-logo">
-                            <img src="https://logodownload.org/wp-content/uploads/2020/12/roku-logo-0.png" alt="Roku" style="height: 85px; width: auto;">
-                        </div>
-                        <span>Roku</span>
-                    </div>
-                    <div class="device-showcase-item">
-                        <div class="device-logo">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrnyJnsTmV75-YL-ebNVsiAbp4jyAeaKRC-ytLlM06CWXkNRMrL1my_AA&s=10" alt="BTV" style="height: 40px; width: auto;">
-                        </div>
-                        <span>BTV</span>
+                    <div class="benefit-item">
+                        <span class="benefit-check">✅</span>
+                        <span><span class="benefit-highlight">Teste Grátis</span> Sem Compromisso!</span>
                     </div>
                 </div>
-                <p class="check-subtitle">Então você pode assistir DoritosTV agora mesmo!</p>
 
+                <p class="hero-subtitle">
+                    Assista em qualquer dispositivo com a melhor qualidade de streaming do Brasil. Sem fidelidade, sem complicação!
+                </p>
 
+                <a href="https://wa.me/555123991381?text=Olá!%20Quero%20assinar%20o%20IPTV%20Premium" class="cta-primary">
+                    <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                    Falar no WhatsApp
+                </a>
+
+                <!-- Banner de teste grátis -->
                 <div class="trial-banner">
                     <div class="trial-content">
-                        <h3>🎁 Teste Grátis por 24h</h3>
-                        <p>Experimente sem compromisso e sem dados de pagamento</p>
-                        <a href="https://wa.me/555123991381?text=Olá!%20Quero%20fazer%20o%20TESTE%20GRÁTIS%20de%2024h%20do%20DoritosTV" class="trial-button">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                            </svg>
-                            Solicitar Teste Grátis
+                        <h3>🎁 Teste Grátis por 24h!</h3>
+                        <p>Experimente sem compromisso e comprove a qualidade</p>
+                        <a href="https://wa.me/555123991381?text=Quero%20fazer%20o%20TESTE%20GRÁTIS%20de%2024h" class="trial-button">
+                            Quero Testar Agora
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Hero Section -->
-        <section class="hero">
+        <!-- Device Check Section -->
+        <section class="device-check">
             <div class="container">
-                <div class="hero-badge">
-                    <span class="pulse-dot"></span>
-                    Streaming de Alta Qualidade
+                <h2 class="check-title">Compatível com Todos os Dispositivos</h2>
+                <p class="check-subtitle">Assista onde e quando quiser</p>
+
+                <div class="device-showcase">
+                    <div class="device-showcase-item">
+                        <div class="device-logo">📱</div>
+                        <span>Celular</span>
+                    </div>
+                    <div class="device-showcase-item">
+                        <div class="device-logo">📺</div>
+                        <span>Smart TV</span>
+                    </div>
+                    <div class="device-showcase-item">
+                        <div class="device-logo">💻</div>
+                        <span>Notebook</span>
+                    </div>
+                    <div class="device-showcase-item">
+                        <div class="device-logo">🖥️</div>
+                        <span>PC</span>
+                    </div>
+                    <div class="device-showcase-item">
+                        <div class="device-logo">📦</div>
+                        <span>TV Box</span>
+                    </div>
+                    <div class="device-showcase-item">
+                        <div class="device-logo">🎮</div>
+                        <span>Consoles</span>
+                    </div>
                 </div>
-                <h1>
-                    Entretenimento Ilimitado<br>
-                    <span class="gradient-text">Onde e Quando Quiser</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Assista seus canais favoritos com qualidade superior em qualquer dispositivo. Planos acessíveis e fácil instalação.
-                </p>
-                <a href="https://wa.me/555123991381?text=Olá!%20Quero%20assinar%20o%20IPTV%20Premium" class="cta-primary">
-                    <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                    </svg>
-                    Assinar Agora
-                </a>
             </div>
         </section>
 
         <!-- Features -->
         <section class="features">
             <div class="container">
-                <h2 class="section-title">Por Que Escolher Nossa IPTV?</h2>
-                <p class="section-subtitle">Tecnologia de ponta para sua melhor experiência</p>
-                
+                <h2 class="section-title">Por Que Escolher a DoritosTV?</h2>
+                <p class="section-subtitle">A melhor experiência de streaming do mercado</p>
+
                 <div class="features-grid">
                     <div class="feature-card">
-                        <div class="feature-icon">🎯</div>
-                        <h3>Qualidade Premium</h3>
-                        <p>Transmissão em alta definição com mínimo de travamentos e máxima estabilidade</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📱</div>
-                        <h3>Múltiplos Dispositivos</h3>
-                        <p>Até 2 conexões simultâneas para você assistir onde estiver</p>
+                        <div class="feature-icon">🎬</div>
+                        <h3>Conteúdo Ilimitado</h3>
+                        <p>Acesso completo a canais, filmes, séries e documentários em um só lugar.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">⚡</div>
-                        <h3>Instalação Rápida</h3>
-                        <p>Configure em minutos com nosso suporte completo via WhatsApp</p>
+                        <h3>Sem Travamentos</h3>
+                        <p>Servidores otimizados e sistema anti-travas para uma transmissão perfeita.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🔒</div>
-                        <h3>Pagamento Seguro</h3>
-                        <p>PIX ou cartão de crédito com total segurança nas transações</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📺</div>
-                        <h3>Conteúdo Variado</h3>
-                        <p>Centenas de canais com programação diversificada para toda família</p>
+                        <h3>100% Seguro</h3>
+                        <p>Pagamentos protegidos e total segurança nas suas informações.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">💬</div>
-                        <h3>Suporte Dedicado</h3>
-                        <p>Atendimento rápido e eficiente para resolver qualquer dúvida</p>
+                        <h3>Suporte 24/7</h3>
+                        <p>Equipe disponível para ajudar sempre que você precisar.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Fácil de Usar</h3>
+                        <p>Interface simples e intuitiva. Instale em minutos e comece a assistir.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3>Melhor Custo-Benefício</h3>
+                        <p>O preço mais justo do mercado com qualidade premium garantida.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Pricing -->
-        <section class="pricing">
+        <section class="pricing" id="planos">
             <div class="container">
                 <h2 class="section-title">Escolha Seu Plano</h2>
-                <p class="section-subtitle">Flexibilidade e economia para você</p>
-                
+                <p class="section-subtitle">Planos flexíveis sem fidelidade</p>
+
                 <div class="pricing-grid">
+                    <!-- Mensal -->
                     <div class="price-card">
                         <div class="plan-name">Mensal</div>
-                        <div class="price">R$ 29,90</div>
-                        <div class="price-period">por mês</div>
-                        <ul class="price-features">
+                        <div class="plan-price">R$ 29<span>,90</span></div>
+                        <div class="plan-period">por mês</div>
+                        <ul class="plan-features">
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>Todos os canais e conteúdos</span>
+                            </li>
                             <li>
                                 <span class="check-icon">✓</span>
                                 <span>2 conexões simultâneas</span>
                             </li>
                             <li>
                                 <span class="check-icon">✓</span>
-                                <span>Todos os dispositivos</span>
+                                <span>Qualidade 4K e Full HD</span>
                             </li>
                             <li>
                                 <span class="check-icon">✓</span>
-                                <span>Qualidade HD</span>
+                                <span>Suporte técnico</span>
                             </li>
                             <li>
                                 <span class="check-icon">✓</span>
-                                <span>Suporte via WhatsApp</span>
+                                <span>Sem fidelidade</span>
                             </li>
                         </ul>
                         <a href="https://wa.me/555123991381?text=Quero%20o%20plano%20MENSAL%20-%20R$29,90" class="cta-secondary">Escolher Plano</a>
                     </div>
 
+                    <!-- Trimestral - DESTAQUE -->
                     <div class="price-card featured">
+                        <div class="featured-badge">Mais Popular</div>
                         <div class="plan-name">Trimestral</div>
-                        <div class="price">R$ 74,90</div>
-                        <div class="price-period">3 meses • R$ 24,97/mês</div>
-                        <ul class="price-features">
+                        <div class="plan-price">R$ 69<span>,90</span></div>
+                        <div class="plan-period">a cada 3 meses</div>
+                        <ul class="plan-features">
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>Todos os canais e conteúdos</span>
+                            </li>
                             <li>
                                 <span class="check-icon">✓</span>
                                 <span>2 conexões simultâneas</span>
                             </li>
                             <li>
                                 <span class="check-icon">✓</span>
-                                <span>Todos os dispositivos</span>
+                                <span>Qualidade 4K e Full HD</span>
                             </li>
                             <li>
                                 <span class="check-icon">✓</span>
-                                <span>Qualidade HD</span>
+                                <span>Suporte técnico prioritário</span>
                             </li>
                             <li>
                                 <span class="check-icon">✓</span>
-                                <span>Suporte via WhatsApp</span>
-                            </li>
-                            <li>
-                                <span class="check-icon">✓</span>
-                                <span>Economia de R$ 15,00</span>
+                                <span>Economia de R$ 19,80</span>
                             </li>
                         </ul>
-                        <a href="https://wa.me/555123991381?text=Quero%20o%20plano%20TRIMESTRAL%20-%20R$74,90" class="cta-secondary">Escolher Plano</a>
+                        <a href="https://wa.me/555123991381?text=Quero%20o%20plano%20TRIMESTRAL%20-%20R$69,90" class="cta-secondary">Escolher Plano</a>
                     </div>
 
+                    <!-- Semestral -->
                     <div class="price-card">
                         <div class="plan-name">Semestral</div>
-                        <div class="price">R$ 119,90</div>
-                        <div class="price-period">6 meses • R$ 19,98/mês</div>
-                        <ul class="price-features">
+                        <div class="plan-price">R$ 119<span>,90</span></div>
+                        <div class="plan-period">a cada 6 meses</div>
+                        <ul class="plan-features">
+                            <li>
+                                <span class="check-icon">✓</span>
+                                <span>Todos os canais e conteúdos</span>
+                            </li>
                             <li>
                                 <span class="check-icon">✓</span>
                                 <span>2 conexões simultâneas</span>
                             </li>
                             <li>
                                 <span class="check-icon">✓</span>
-                                <span>Todos os dispositivos</span>
+                                <span>Qualidade 4K e Full HD</span>
                             </li>
                             <li>
                                 <span class="check-icon">✓</span>
-                                <span>Qualidade HD</span>
-                            </li>
-                            <li>
-                                <span class="check-icon">✓</span>
-                                <span>Suporte via WhatsApp</span>
+                                <span>Suporte técnico VIP</span>
                             </li>
                             <li>
                                 <span class="check-icon">✓</span>
@@ -1043,7 +1079,7 @@
             <div class="container">
                 <h2 class="section-title">Formas de Pagamento</h2>
                 <p class="section-subtitle">Escolha a opção mais conveniente para você</p>
-                
+
                 <div class="payment-methods">
                     <div class="payment-item">
                         <span>💳</span>
@@ -1064,7 +1100,7 @@
             <div class="container">
                 <h2 class="section-title">Perguntas Frequentes</h2>
                 <p class="section-subtitle">Tire suas dúvidas</p>
-                
+
                 <div class="faq-list">
                     <div class="faq-item">
                         <div class="faq-question">
@@ -1075,7 +1111,7 @@
                             Após a contratação, você receberá um link de instalação e instruções simples via WhatsApp. O processo leva apenas alguns minutos e nosso suporte está disponível para ajudar. Se quiser, teste grátis por 24h primeiro!
                         </div>
                     </div>
-                    
+
                     <div class="faq-item">
                         <div class="faq-question">
                             Como funciona o teste grátis?
@@ -1085,7 +1121,7 @@
                             É simples! Clique no botão de teste grátis, entre em contato pelo WhatsApp e receba acesso completo por 24 horas sem nenhum compromisso e sem precisar fornecer dados de pagamento. Teste e comprove a qualidade!
                         </div>
                     </div>
-                    
+
                     <div class="faq-item">
                         <div class="faq-question">
                             Posso usar em quantos dispositivos?
@@ -1095,7 +1131,7 @@
                             Todos os planos incluem 2 conexões simultâneas. Você pode instalar em vários dispositivos, mas apenas 2 podem assistir ao mesmo tempo.
                         </div>
                     </div>
-                    
+
                     <div class="faq-item">
                         <div class="faq-question">
                             A qualidade é realmente boa?
@@ -1105,7 +1141,7 @@
                             Sim! Oferecemos transmissão em alta definição com servidores otimizados para garantir mínimo de travamentos e máxima qualidade de imagem.
                         </div>
                     </div>
-                    
+
                     <div class="faq-item">
                         <div class="faq-question">
                             Como renovar minha assinatura?
@@ -1169,7 +1205,7 @@
             question.addEventListener('click', () => {
                 const answer = question.nextElementSibling;
                 const icon = question.querySelector('span');
-                
+
                 if (answer.style.display === 'block') {
                     answer.style.display = 'none';
                     icon.textContent = '+';
@@ -1177,7 +1213,7 @@
                     // Close all other answers
                     document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
                     document.querySelectorAll('.faq-question span').forEach(i => i.textContent = '+');
-                    
+
                     answer.style.display = 'block';
                     icon.textContent = '−';
                 }
